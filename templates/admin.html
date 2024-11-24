@@ -1,0 +1,10 @@
+{% extends 'layout_admin.html' %}
+
+{% block content %}
+
+    <h1>Admin Page</h1>
+    <a href="{{ url_for('tampil') }}">Tampil Data</a><br>
+    <a href="{{ url_for('simpan') }}">Tambah Data Pemimpin</a><br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+
+{% endblock %}
