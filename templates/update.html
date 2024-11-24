@@ -1,0 +1,11 @@
+{% extends 'layout_admin.html' %}
+
+{% block content %}
+    <h1>Update Pemimpin</h1>
+    <form action="{{ url_for('update', id=value[0]) }}" method="post">
+        <input type="text" name="nama_pemimpin" value="{{ value[1] }}" required><br>
+        <input type="number" name="tahun" value="{{ value[2] }}" required><br>
+        <textarea name="negara">{{ value[3] }}</textarea><br>
+        <button type="submit">Update</button>
+    </form>
+{% endblock %}
