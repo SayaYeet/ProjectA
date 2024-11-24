@@ -1,0 +1,26 @@
+{% extends 'layout_admin.html' %}
+
+{% block content %}
+    <h1>Data Pemimpin Negara</h1>
+    <table border="1" class="border border-danger">
+        <tr>
+            <span class="border">
+            <th>Nama Pemimpin |</th> 
+            <th>Tahun |</th>
+            <th>Negara |</th>
+            <th>Aksi</th>
+            
+        </tr>
+        {% for result in data %}
+        <tr>
+            <td>{{ result[1] }}</td>
+            <td>{{ result[2] }}</td>
+            <td>{{ result[3] }}</td>
+            <td>
+                <a href="{{ url_for('update', id=result[0]) }}">Edit</a> |
+                <a href="{{ url_for('hapus', id=result[0]) }}">Hapus</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
